@@ -54,9 +54,9 @@ sumar_loop:
 ;--------------------------------------------------------
 segment .text
 	
-global  test1
+global  suma
 	
-test1:
+suma:
       enter   0,0
       mov     EAX,[EBP+8]        ; get argument1 (x)
       add     EAX,[EBP+12]       ; add argument 2 (y)

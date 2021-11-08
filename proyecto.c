@@ -8,7 +8,7 @@
 
 void division();
 void multiplicaciones();
-void sumaDeValores();
+void sumaDeDosValores();
 
 #define  cantidad  10
 
@@ -55,7 +55,7 @@ void sumaDeDosValores()
         move(10,54);printw("   leave");
         move(11,54);printw("   ret");
         
-        printf("Resultado = %d\n",test1(x, y));
+        printf("Resultado = %d\n",suma(x, y));
         
         multiplicaciones();
 }
