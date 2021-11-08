@@ -44,16 +44,18 @@ void sumaDeDosValores()
         move(16,0);printw("Ingrese el nùmero 1 = ");
         scanw("%d", &x);
         move(6,54);printw("segment .text");
-        move(7,54);printw("   test1:");
-        move(8,54);printw("   mov   EAX,[EBP+8]");
+        move(7,54);printw("global suma");
+        move(8,54);printw("   suma:");
+        move(9,54);printw("   enter   0,0");
+        move(9,54);printw("   mov   EAX,[EBP+8]");
         move(1,2);printw("PC: 00111101");
         
         move(17,0);printw("Ingrese el nùmero 2 = ");
         scanw("%d", &y);
         move(1,2);printw("PC: 01000000");
-        move(9,54);printw("   add   EAX,[EBP+12]");
-        move(10,54);printw("   leave");
-        move(11,54);printw("   ret");
+        move(10,54);printw("   add   EAX,[EBP+12]");
+        move(11,54);printw("   leave");
+        move(12,54);printw("   ret");
         
         printf("Resultado = %d\n",suma(x, y));
         
@@ -68,9 +70,19 @@ void multiplicaciones()
         move(19,0);printw("Se procederà a multiplicar 2 valores");
         move(20,0);printw("Ingrese el nùmero 1 = ");
         scanw("%d", &num1);
-        
+        move(6,54);printw("segment .text");
+        move(7,54);printw("global multiplicacion");
+        move(7,54);printw("   enter  0,0");
+        move(9,54);printw("   mov    AL,[EBP+8]");
+        move(1,2);printw("PC: 01001101");
         move(21,0);printw("Ingrese el nùmero 2 = ");
         scanw("%d", &num2);
+        move(7,54);printw("   mov    BL,[EBP+12]");
+        move(9,54);printw("   mul    BL");
+        move(9,54);printw("   leave");
+        move(9,54);printw("   ret");
+        move(1,2);printw("PC: 01010010");
         
         printf("Resultado = %d\n",multiplicacion(num1, num2));
+        scanw("%d", &num1);
 }

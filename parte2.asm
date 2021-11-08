@@ -76,8 +76,6 @@ multiplicacion:
       enter   0,0
       mov     AL,[EBP+8]        ; get argument1 (x)
       mov     BL,[EBP+12]       ; add argument 2 (y)
-      sub     AL,30h
-      sub     BL,30h
       mul     BL
       MOV     AL,BL
       leave
